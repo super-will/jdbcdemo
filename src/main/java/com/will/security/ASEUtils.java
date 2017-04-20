@@ -13,7 +13,11 @@ import sun.misc.BASE64Encoder;
  */
 public class ASEUtils {
 	
-	private String sKey = "10d2Xd4hf0s1XvSw";
+//	private String sKey = "10d2Xd4hf0s1XvSw";
+	
+//	private String ivParameter = "10d2Xd4hf0s1XvSw";
+	
+	private String sKey = "xxsahjdsdsaiudas";
 	
 	private String ivParameter = "10d2Xd4hf0s1XvSw";
 	
@@ -62,8 +66,8 @@ public class ASEUtils {
     
     public static void main(String args[]) throws Exception{
 		ASEUtils ase = new ASEUtils();
-		System.out.println(ase.encrypt("http://localhsot:9282/:31209321"));
-		System.out.println(ase.decrypt(ase.encrypt("http://localhsot:9282/:31209321")));
+		System.out.println(ase.encrypt("123456"));
+//		System.out.println(ase.decrypt(ase.encrypt("http://localhsot:9282/:31209321")));
 		
 	}
 }
