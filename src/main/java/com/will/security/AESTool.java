@@ -16,6 +16,8 @@ public class AESTool {
 	
 	public static final String src = "http://localhsot:9282/";
 	
+	private static final String sKey = "10d2Xd4hf0s1XvSw";
+	
 	public String AESEncrypt(String src){
 		String encryData = null;
 		try {
@@ -23,7 +25,7 @@ public class AESTool {
 			KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
 			keyGenerator.init(128);
 			SecretKey secretKey = keyGenerator.generateKey();
-			byte[] keyBytes = secretKey.getEncoded();
+			byte[] keyBytes = sKey.getBytes();
 			
 			//key转换
 			Key key = new SecretKeySpec(keyBytes, "AES");
@@ -48,7 +50,7 @@ public class AESTool {
 			KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
 			keyGenerator.init(128);
 			SecretKey secretKey = keyGenerator.generateKey();
-			byte[] keyBytes = secretKey.getEncoded();
+			byte[] keyBytes = sKey.getBytes();
 			
 			//key转换
 			Key key = new SecretKeySpec(keyBytes, "AES");
